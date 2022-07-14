@@ -110,14 +110,14 @@ for (;;){
   }
 }
 
-//adding 6th question that takes a number input, but only allows 4 attempts
 
+//adding 6th question that takes a number input, but only allows 4 attempts
 
 for (let i=1; i <= 4; i++){
 
   console.log('Attempt number: ' + i);
 
-  let age = prompt('How old am I? You have 4 tries to guess it correctly');
+  let age = prompt('How old am I?');
   console.log(age);
 
   age = parseInt(age);
@@ -133,6 +133,34 @@ for (let i=1; i <= 4; i++){
   else if (age !== 40) {
     console.log('Not quite right...');
     alert('Not quite right... you have ' + (4-i) + ' attempts left.');
+  }
+}
+
+
+//adding a 7th question that hss multiple correct answers
+
+let favAnimals = ['dog','capybara','hamster','panda','raccoon','porcupine','koala','quokka','wombat','kangaroo'];
+let foundMatch = false;
+
+for (let i=1; i <=6; i++){
+  console.log('7th question Attempt number: ' + i);
+  let topTen = prompt('Name one of my top 10 favorite animals (singular form). You will have six tries.').toLowerCase();
+  console.log('animal guess: ' + topTen);
+
+  for (let j=0; j < favAnimals.length; j++){
+    if (topTen === favAnimals[j]){
+      alert ('Yup, that\'s one! My Top Ten animals are: ' + favAnimals);
+      score++;
+      foundMatch = true;
+      break;
+    }
+  }
+
+  if (foundMatch) {
+    break;
+  }
+  else {
+    alert ('Sorry, incorrect answer. You have ' + (6-i) + ' attempts left.');
   }
 }
 
