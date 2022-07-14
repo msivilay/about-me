@@ -32,26 +32,30 @@ function fChicago(){
 }
 fChicago();
 
-//while (true){} -- is my preferred but linter is unhappy with it
-for (;;){
+function fDogs(){
 
-  let dogs = prompt('Do I hate dogs (y/n)?').toLowerCase();
-  // console.log(dogs);
+  //while (true){} -- is my preferred but linter is unhappy with it
+  for (;;){
 
-  if (dogs === 'yes' || dogs === 'y') {
+    let dogs = prompt('Do I hate dogs (y/n)?').toLowerCase();
+    // console.log(dogs);
+
+    if (dogs === 'yes' || dogs === 'y') {
     //  console.log('Sorry, but you are wrong. Dogs rule!');
-    alert('Sorry, but you are wrong. Dogs rule!');
-    break;
-  } else if (dogs === 'no' || dogs === 'n') {
+      alert('Sorry, but you are wrong. Dogs rule!');
+      break;
+    } else if (dogs === 'no' || dogs === 'n') {
     //  console.log('Yup! Dogs are the best!');
-    alert('Yup! Dogs are the best!');
-    score++;
-    break;
-  } else {
+      alert('Yup! Dogs are the best!');
+      score++;
+      break;
+    } else {
     //  console.log('You need to answer with a \'yes\' or a \'no\'');
-    alert('You need to answer with a \'yes\' or a \'no\'');
+      alert('You need to answer with a \'yes\' or a \'no\'');
+    }
   }
 }
+fDogs();
 
 //while (true){} -- is my preferred but linter is unhappy with it
 for (;;){
