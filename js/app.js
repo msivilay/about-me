@@ -103,26 +103,28 @@ function fDance(){
 }
 fDance();
 
-//while (true){} -- is my preferred but linter is unhappy with it
-for (;;){
-  let SPU = prompt('Did I attend Seattle Pacific University (y/n)?').toLowerCase();
-  // console.log(SPU);
+function fSPU(){
+  //while (true){} -- is my preferred but linter is unhappy with it
+  for (;;){
+    let SPU = prompt('Did I attend Seattle Pacific University (y/n)?').toLowerCase();
+    // console.log(SPU);
 
-  if (SPU === 'yes' || SPU === 'y') {
+    if (SPU === 'yes' || SPU === 'y') {
     //  console.log('Yes, I both worked and went to school at SPU!');
-    alert('Yes, I both worked and went to school at SPU!');
-    score++;
-    break;
-  } else if (SPU === 'no' || SPU === 'n') {
+      alert('Yes, I both worked and went to school at SPU!');
+      score++;
+      break;
+    } else if (SPU === 'no' || SPU === 'n') {
     //  console.log('Sorry, wrong anwer.');
-    alert('Sorry, wrong anwer.');
-    break;
-  } else {
+      alert('Sorry, wrong anwer.');
+      break;
+    } else {
     //  console.log('You need to answer with a \'yes\' or a \'no\'');
-    alert('You need to answer with a \'yes\' or a \'no\'');
+      alert('You need to answer with a \'yes\' or a \'no\'');
+    }
   }
 }
-
+fSPU();
 
 //adding 6th question that takes a number input, but only allows 4 attempts
 
