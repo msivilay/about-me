@@ -80,25 +80,28 @@ function fTeacher(){
 }
 fTeacher();
 
+function fDance(){
 //while (true){} -- is my preferred but linter is unhappy with it
-for (;;){
-  let dance = prompt('Do I know how to dance (y/n)?').toLowerCase();
-  // console.log(dance);
+  for (;;){
+    let dance = prompt('Do I know how to dance (y/n)?').toLowerCase();
+    // console.log(dance);
 
-  if (dance === 'yes' || dance === 'y') {
+    if (dance === 'yes' || dance === 'y') {
     //  console.log('I sure do, let\'s boogie\!');
-    alert('I sure do, let\'s boogie!');
-    score++;
-    break;
-  } else if (dance === 'no' || dance === 'n') {
+      alert('I sure do, let\'s boogie!');
+      score++;
+      break;
+    } else if (dance === 'no' || dance === 'n') {
     //  console.log('Wrong: Everyone can dance!');
-    alert('Wrong: Everyone can dance!');
-    break;
-  } else {
+      alert('Wrong: Everyone can dance!');
+      break;
+    } else {
     //  console.log('You need to answer with a \'yes\' or a \'no\'');
-    alert('You need to answer with a \'yes\' or a \'no\'');
+      alert('You need to answer with a \'yes\' or a \'no\'');
+    }
   }
 }
+fDance();
 
 //while (true){} -- is my preferred but linter is unhappy with it
 for (;;){
