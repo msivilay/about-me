@@ -127,30 +127,32 @@ function fSPU(){
 fSPU();
 
 //adding 6th question that takes a number input, but only allows 4 attempts
+function fAge(){
 
-for (let i=1; i <= 4; i++){
+  for (let i=1; i <= 4; i++){
 
-  console.log('Attempt number: ' + i);
+    console.log('Attempt number: ' + i);
 
-  let age = prompt('How old am I?');
-  console.log(age);
+    let age = prompt('How old am I?');
+    console.log(age);
 
-  age = parseInt(age);
+    age = parseInt(age);
 
-  if (age === 40) {
-    console.log('You correctly guessed my age!');
-    alert('You correctly guessed my age!');
-    score++;
-    console.log('current ' + score);
-    break;
-  }
+    if (age === 40) {
+      console.log('You correctly guessed my age!');
+      alert('You correctly guessed my age!');
+      score++;
+      console.log('current ' + score);
+      break;
+    }
 
-  else if (age !== 40) {
-    console.log('Not quite right...');
-    alert('Not quite right... you have ' + (4-i) + ' attempts left.');
+    else if (age !== 40) {
+      console.log('Not quite right...');
+      alert('Not quite right... you have ' + (4-i) + ' attempts left.');
+    }
   }
 }
-
+fAge();
 
 //adding a 7th question that hss multiple correct answers
 
