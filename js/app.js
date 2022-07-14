@@ -57,25 +57,28 @@ function fDogs(){
 }
 fDogs();
 
+function fTeacher(){
 //while (true){} -- is my preferred but linter is unhappy with it
-for (;;){
-  let teacher = prompt('Was I a teacher (y/n)?').toLowerCase();
-  // console.log(teacher);
+  for (;;){
+    let teacher = prompt('Was I a teacher (y/n)?').toLowerCase();
+    // console.log(teacher);
 
-  if (teacher === 'yes' || teacher === 'y') {
+    if (teacher === 'yes' || teacher === 'y') {
     //  console.log('Yes, I was a high school teacher.');
-    alert('Yes, I was a high school teacher.');
-    score++;
-    break;
-  } else if (teacher === 'no' || teacher === 'n') {
+      alert('Yes, I was a high school teacher.');
+      score++;
+      break;
+    } else if (teacher === 'no' || teacher === 'n') {
     //  console.log('Sorry, incorrect. See me after class.');
-    alert('Sorry, incorrect. See me after class.');
-    break;
-  } else {
+      alert('Sorry, incorrect. See me after class.');
+      break;
+    } else {
     //  console.log('You need to answer with a \'yes\' or a \'no\'');
-    alert('You need to answer with a \'yes\' or a \'no\'');
+      alert('You need to answer with a \'yes\' or a \'no\'');
+    }
   }
 }
+fTeacher();
 
 //while (true){} -- is my preferred but linter is unhappy with it
 for (;;){
