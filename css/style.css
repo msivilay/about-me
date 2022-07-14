@@ -5,10 +5,22 @@ h1 {
 
 h2 {
 	color:rgb(6, 169, 169);
+	margin-bottom: 5px;
 }
 
 span {
 	color:brown;
-
 	font-size: small;
+}
+
+ul {
+	list-style-type: disc;
+	margin-bottom: 5px;
+	padding-left: 2rem;
+}
+
+ol {
+	list-style-type:decimal;
+	margin-bottom: 5px;
+	padding-left: 2rem;
 }
