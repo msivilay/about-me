@@ -9,25 +9,28 @@ alert('Welcome, ' + userName + '!' + ' Let\'s see how well you know me...');
 
 let score = 0;
 
+function fChicago(){
 //while (true){} -- is my preferred but linter is unhappy with it
-for (;;){
-  let fromChicago = prompt('Am I from Chicago (y/n)?').toLowerCase();
-  // console.log(fromChicago);
+  for (;;){
+    let fromChicago = prompt('Am I from Chicago (y/n)?').toLowerCase();
+    // console.log(fromChicago);
 
-  if (fromChicago === 'yes' || fromChicago === 'y') {
+    if (fromChicago === 'yes' || fromChicago === 'y') {
     //  console.log('Yes, I am from Chicago!');
-    alert('Yes, I am from Chicago!');
-    score++;
-    break;
-  } else if (fromChicago === 'no' || fromChicago === 'n') {
+      alert('Yes, I am from Chicago!');
+      score++;
+      break;
+    } else if (fromChicago === 'no' || fromChicago === 'n') {
     //  console.log('Sorry, you are wrong. I am from Chicago.');
-    alert('Sorry, you are wrong. I am from Chicago.');
-    break;
-  } else {
+      alert('Sorry, you are wrong. I am from Chicago.');
+      break;
+    } else {
     //  console.log('You need to answer with a \'yes\' or a \'no\'');
-    alert('You need to answer with a \'yes\' or a \'no\'');
+      alert('You need to answer with a \'yes\' or a \'no\'');
+    }
   }
 }
+fChicago();
 
 //while (true){} -- is my preferred but linter is unhappy with it
 for (;;){
