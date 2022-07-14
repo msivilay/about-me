@@ -155,30 +155,33 @@ function fAge(){
 fAge();
 
 //adding a 7th question that hss multiple correct answers
+function fTopTen(){
 
-let favAnimals = ['dog','capybara','hamster','panda','raccoon','porcupine','koala','quokka','wombat','kangaroo'];
-let foundMatch = false;
+  let favAnimals = ['dog','capybara','hamster','panda','raccoon','porcupine','koala','quokka','wombat','kangaroo'];
+  let foundMatch = false;
 
-for (let i=1; i <=6; i++){
-  console.log('7th question Attempt number: ' + i);
-  let topTen = prompt('Name one of my top 10 favorite animals (singular form). You will have six tries.').toLowerCase();
-  console.log('animal guess: ' + topTen);
+  for (let i=1; i <=6; i++){
+    console.log('7th question Attempt number: ' + i);
+    let topTen = prompt('Name one of my top 10 favorite animals (singular form). You will have six tries.').toLowerCase();
+    console.log('animal guess: ' + topTen);
 
-  for (let j=0; j < favAnimals.length; j++){
-    if (topTen === favAnimals[j]){
-      alert ('Yup, that\'s one! My Top Ten animals are: ' + favAnimals);
-      score++;
-      foundMatch = true;
+    for (let j=0; j < favAnimals.length; j++){
+      if (topTen === favAnimals[j]){
+        alert ('Yup, that\'s one! My Top Ten animals are: ' + favAnimals);
+        score++;
+        foundMatch = true;
+        break;
+      }
+    }
+
+    if (foundMatch) {
       break;
     }
-  }
-
-  if (foundMatch) {
-    break;
-  }
-  else {
-    alert ('Sorry, incorrect answer. You have ' + (6-i) + ' attempts left.');
+    else {
+      alert ('Sorry, incorrect answer. You have ' + (6-i) + ' attempts left.');
+    }
   }
 }
+fTopTen();
 
 alert('You got a score of ' + score + ' out of 7. Thanks for playing, ' + userName +'.');
