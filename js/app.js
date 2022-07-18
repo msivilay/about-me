@@ -1,11 +1,5 @@
 'use script';
 
-let userName = prompt('Greetings, what is your name?');
-
-alert('Welcome, ' + userName + '!' + ' Let\'s see how well you know me...');
-
-let score = 0;
-
 function fChicago(){
   for (;;){
     let fromChicago = prompt('Am I from Chicago (y/n)?').toLowerCase();
@@ -22,7 +16,6 @@ function fChicago(){
     }
   }
 }
-fChicago();
 
 function fDogs(){
 
@@ -42,7 +35,6 @@ function fDogs(){
     }
   }
 }
-fDogs();
 
 function fTeacher(){
   for (;;){
@@ -60,7 +52,7 @@ function fTeacher(){
     }
   }
 }
-fTeacher();
+
 
 function fDance(){
   for (;;){
@@ -78,7 +70,6 @@ function fDance(){
     }
   }
 }
-fDance();
 
 function fSPU(){
   for (;;){
@@ -96,12 +87,11 @@ function fSPU(){
     }
   }
 }
-fSPU();
 
-
-let fakeAge = Math.floor(Math.random() * 101);
 
 function fAge(){
+
+  let fakeAge = Math.floor(Math.random() * 101);
 
   for (let i=1; i <= 4; i++){
 
@@ -128,7 +118,6 @@ function fAge(){
     }
   }
 }
-fAge();
 
 function fTopTen(){
 
@@ -152,9 +141,26 @@ function fTopTen(){
     }
     else {
       alert ('Sorry, incorrect answer. You have ' + (6-i) + ' attempts left.');
+      if (i === 6) {
+        alert ('Sorry, no matches, but you can learn about my favorite animals in just a few clicks.');
+      }
     }
   }
 }
+
+
+let userName = prompt('Greetings, what is your name?');
+
+alert('Welcome, ' + userName + '!' + ' Let\'s see how well you know me...');
+
+let score = 0;
+
+fChicago();
+fDogs();
+fTeacher();
+fDance();
+fSPU();
+fAge();
 fTopTen();
 
 alert('You got a score of ' + score + ' out of 7. Thanks for playing, ' + userName +'.');
