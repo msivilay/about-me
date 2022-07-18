@@ -127,6 +127,9 @@ function fSPU(){
 fSPU();
 
 //adding 6th question that takes a number input, but only allows 4 attempts
+
+let fakeAge = Math.floor(Math.random() * 101);
+
 function fAge(){
 
   for (let i=1; i <= 4; i++){
@@ -138,7 +141,7 @@ function fAge(){
 
     age = parseInt(age);
 
-    if (age === 40) {
+    if (age === fakeAge) {
       console.log('You correctly guessed my age!');
       alert('You correctly guessed my age!');
       score++;
@@ -146,9 +149,18 @@ function fAge(){
       break;
     }
 
-    else if (age !== 40) {
-      console.log('Not quite right...');
-      alert('Not quite right... you have ' + (4-i) + ' attempts left.');
+    else if (age < fakeAge) {
+      console.log('Age guess too low:');
+      alert('Your guess is too low... you have ' + (4-i) + ' attempts left.');
+    }
+
+    else if (age > fakeAge) {
+      console.log('Age guess too high:');
+      alert('Your guess is too high... you have ' + (4-i) + ' attempts left.');
+    }
+
+    if (i === 4){
+      alert(`Sorry, you have run out of guesses. I am ${fakeAge} years old according to the random number generator ;P`);
     }
   }
 }
